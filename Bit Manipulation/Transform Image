@@ -18,8 +18,9 @@ public class Main{
 	        }
 	        int res=rev^mask;
 	        for(int j=n-1;j>=0;j--){
-	          System.out.print((res>>j)&1);
+	          System.out.print(((res>>j)&1)+" ");
 	        }
+	         System.out.print("\n");
 	    }
 	}
 }
