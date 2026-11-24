@@ -1,0 +1,10 @@
+import java.util.*;
+public class Main{
+	public static void main(String[] args) {
+	    Scanner in=new Scanner(System.in);
+	    String m=in.next();
+	    int n=Integer.parseInt(m,2); 
+	    int gray=n^(n>>1);
+	    System.out.print(Integer.toBinaryString(gray));
+	}
+}
