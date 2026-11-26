@@ -1,0 +1,27 @@
+import java.util.*;
+public class Main{
+	public static void main(String[] args) {
+	    Scanner in=new Scanner(System.in);
+	    String s=in.nextLine();
+        int len=s.length();
+        int j=0,sum=0;
+         int []arr=new int[len];
+         int i=0;
+       while(i!=len){
+            if(Character.isDigit(s.charAt(i))){
+                while(i<len && Character.isDigit(s.charAt(i))){
+                   sum=(sum*10)+(s.charAt(i)-'0');
+                   i++;
+                }
+                 arr[j]=sum;
+                j++;
+                sum=0;
+            }
+                else{ 
+                    i++;
+                }
+            }
+      int d=Arrays.stream(arr).sum();
+      System.out.print(d);
+	}
+	}
