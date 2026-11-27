@@ -1,0 +1,21 @@
+import java.util.*;
+public class Main{
+	public static void main(String[] args) {
+	    Scanner in=new Scanner(System.in);
+	    String s=in.nextLine();
+	    int tar=in.nextInt();
+        int n=s.length();
+    for(int i=0;i<n;i++){
+        for(int j=i+1;j<=n;j++){
+            String word=(s.substring(i,j));
+            int len=word.length();
+            int sum=0;
+            for(int k=0;k<len;k++){
+                sum+=(word.charAt(k)-'0');
+            }
+            if(sum==tar)
+                System.out.println(s.substring(i,j));
+        }
+    }
+	}
+}
